@@ -1,6 +1,9 @@
 #include <cassert>
+#include <iostream>
 
 #include "single-linked-list.h"
+
+using namespace std::literals;
 
 // Эта функция проверяет работу класса SingleLinkedList
 void Test() {
@@ -147,4 +150,6 @@ void Test() {
 
 int main() {
     Test();
+	std::cout << "test done"s << std::endl;
+	return 0;
 }
