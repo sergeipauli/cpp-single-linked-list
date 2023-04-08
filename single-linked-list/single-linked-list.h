@@ -249,10 +249,10 @@ template <typename Type>
 bool operator== (const SingleLinkedList <Type>& lhs, const SingleLinkedList <Type>& rhs) {
     // FIX_12
     if (lhs.GetSize() == rhs.GetSize()) {
-        return true;
+        return std::equal(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
     }
 
-    return std::equal(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+    return false;
 }
 
 template <typename Type>
