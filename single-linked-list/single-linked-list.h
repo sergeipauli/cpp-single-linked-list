@@ -141,13 +141,14 @@ class SingleLinkedList {
             swap(tmp);
         }
 
-        //FIX_6
+        //FIX_6_2
         SingleLinkedList(const SingleLinkedList& other) {
             if (size_ == 0 && head_.next_node == nullptr) {
                 SingleLinkedList tmp;
+                auto tmp_iter = tmp.before_begin();
 
                 for (auto iter = other.begin(); iter != other.end(); ++iter) {
-                    tmp.InsertAfter(tmp.begin(), *iter);
+                    tmp_iter = tmp.InsertAfter(tmp_iter, *iter);
                 }
 
                 swap(tmp);
